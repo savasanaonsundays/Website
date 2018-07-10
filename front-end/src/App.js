@@ -11,6 +11,13 @@ class App extends Component {
 
         <div>
             <Navman />
+
+
+
+
+
+
+           
       </div>
           
 

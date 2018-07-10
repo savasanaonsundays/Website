@@ -1,18 +1,24 @@
+const mongoose = require('mongoose');
 const express = require('express');
 const server = express();
-
-const PORT = 7000;
-server.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
-
+const port = 7000;
+const app = express();
 
 
+//DB Config
+const db = require('./config/keys').mongoURI;
+
+//connect to mongoDB
+mongoose
+  .connect(db)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
+
+
+app.get('/', (req, res) => res.send('Hello'));
+app.listen(port, () => console.log(`server is running on  port ${port}`));
 
 
 
 
 
-// server.use([
-//       require('./routes/loadCounter'),
-//       // can add more routes here
-//     ]);
-//     
