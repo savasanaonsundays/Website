@@ -1,8 +1,23 @@
 const mongoose = require('mongoose');
 const express = require('express');
-const server = express();
-const port = 7000;
+
+const bookings = require('./routes/api/bookings');
+const content = require('./routes/api/content');
+const admin = require('./routes/api/admin');
+
+
 const app = express();
+
+
+//User routes
+
+app.use('/api/admin' , admin);
+app.use('/api/content', content);
+app.use('/api/bookings', bookings);
+
+
+const port = 7000;
+
 
 
 //DB Config
