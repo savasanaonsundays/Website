@@ -1,48 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const ContentSchema = new Schema({
- 
-    content:{
+const content = new Schema({
+    text: String
+})
 
-        aboutMe:{
-            type: String,
-            required: true
-        },
-        missionStatement:{
-            type: String,
-            required: true
-        },
-        timeTable:{
+     mongoose.model('content', content)
 
-        },
-        pricing:{
-            type: String,
-            required: true
-        },
-        privateBookings:{
-            type: String,
-            required: true
-        },
-        massage:{
-            type: String,
-            required: true
-        },
-        privateYoga:{
-            type: String,
-            required: true
-        },
-        publicYoga:{
-            type: String,
-            required: true
-        },  
-        testimonials:{
-            type: String,
-            required: true
-        }
-
-
-
-    }
-
-});
