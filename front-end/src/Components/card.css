@@ -1,0 +1,12 @@
+.lowimage {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.individualcard {
+  padding-bottom: 10px;
+  vertical-align: middle;
+  background-color: yellow;
+}
