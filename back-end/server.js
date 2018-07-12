@@ -6,6 +6,7 @@ const bookings = require('./routes/api/bookings');
 const admin = require('./routes/api/admin');
 const test = require('./models/test')
 const content = require('./models/Content');
+const contentRoute = require('./routes/api/content')
 // Port
 const port = 7000;
 const app = express();
@@ -20,35 +21,35 @@ app.use('/api/admin' , admin);
 
 app.use('/api/bookings', bookings);
 
+app.use('/api/content', contentRoute);
 
 
 
 
 
+// // RETURNS ABOUT ME
 
-// RETURNS ABOUT ME
+// mongoose.connect(db)
+// const aboutMe = mongoose.model("content")
+// aboutMe.findOne({name:"aboutMe"}).then(stuff => {
+//   console.log(stuff.text)
+// })
 
-mongoose.connect(db)
-const aboutMe = mongoose.model("content")
-aboutMe.findOne({name:"aboutMe"}).then(stuff => {
-  console.log(stuff.text)
-})
+// // RETURNS QUALIFICATIONS
 
-// RETURNS QUALIFICATIONS
+// mongoose.connect(db)
+// const qualifications = mongoose.model("content")
+// qualifications.findOne({name:"qualifications"}).then(stuff => {
+//   console.log(stuff.text)
+// })
 
-mongoose.connect(db)
-const qualifications = mongoose.model("content")
-qualifications.findOne({name:"qualifications"}).then(stuff => {
-  console.log(stuff.text)
-})
+// // RETURNS PRICES
 
-// RETURNS PRICES
-
-mongoose.connect(db)
-const prices = mongoose.model("content")
-prices.findOne({name:"prices"}).then(stuff => {
-  console.log(stuff.text)
-})
+// mongoose.connect(db)
+// const prices = mongoose.model("content")
+// prices.findOne({name:"prices"}).then(stuff => {
+//   console.log(stuff.text)
+// })
 
 
 
