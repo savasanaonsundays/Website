@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './springboard.css';
-import Card from './Card';
+import { Container, Row, Col } from 'reactstrap';
+import Item from './Card';
 
 // export default class Springboard extends React.Component {
 //     render() {
@@ -25,8 +26,30 @@ export class Springboard extends Component {
   render() {
     return (
       <div className="Springboard">
-        Hi
-        <Card />
+        <Container>
+          <Row>
+            <Col>
+              <Item title={'Private Lessons'} />
+            </Col>
+            <Col>
+              <Item title={'Oil Store'} />
+            </Col>
+            <Col>
+              <Item title={'Blog'} />
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <Item title={'Class Timetable'} />
+            </Col>
+            <Col>
+              <Item title={'Massage'} />
+            </Col>
+            <Col>
+              <Item title={'About Us'} />
+            </Col>
+          </Row>
+        </Container>
       </div>
     );
   }
