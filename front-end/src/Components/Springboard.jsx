@@ -29,24 +29,27 @@ export class Springboard extends Component {
         <Container>
           <Row>
             <Col>
-              <Item title={'Private Lessons'} />
+              <Item
+                title="Private Lessons"
+                image={require('../Assets/springboard/yoga.png')}
+              />
             </Col>
             <Col>
-              <Item title={'Oil Store'} />
+              <Item title="Oil Store" />
             </Col>
             <Col>
-              <Item title={'Blog'} />
+              <Item title="Blog" />
             </Col>
           </Row>
           <Row>
             <Col>
-              <Item title={'Class Timetable'} />
+              <Item title="Class Timetable" />
             </Col>
             <Col>
-              <Item title={'Massage'} />
+              <Item title="Massage" />
             </Col>
             <Col>
-              <Item title={'About Us'} />
+              <Item title="About Us" />
             </Col>
           </Row>
         </Container>

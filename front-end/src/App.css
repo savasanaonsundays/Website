@@ -1,5 +1,4 @@
 body {
-  background: url(https://images.unsplash.com/photo-1513279922550-250c2129b13a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5ab44925abfac230b479589e22b1cc50&auto=format&fit=crop&w=1950&q=80)
-    no-repeat;
+  background-color: lightslategray;
   background-size: cover;
 }

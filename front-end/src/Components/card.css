@@ -2,11 +2,12 @@
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   height: 200px;
-  object-fit: contain;
+  object-fit: fill;
 }
 
 .individualcard {
   padding-bottom: 10px;
   vertical-align: middle;
   background-color: yellow;
+  text-align: center;
 }
