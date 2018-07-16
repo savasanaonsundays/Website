@@ -17,7 +17,7 @@ import Item from './Card';
 
 //   export default Springboard;
 
-export class Springboard extends Component {
+class Springboard extends Component {
   constructor(props) {
     super(props);
     this.state = {};
