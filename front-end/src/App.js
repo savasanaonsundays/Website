@@ -32,6 +32,15 @@ import Springboard from './Components/Springboard';
 import Sometext from './Components/Description';
 import Navbar from './Components/Navbar';
 import Social from './Components/Social';
+import Aboutme from './Components/Aboutme';
+
+import ReactDOM from 'react-dom';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+import { faCheckSquare, faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+library.add(fab, faCheckSquare, faCoffee);
 
 const App = () => (
   <Router>
@@ -40,6 +49,7 @@ const App = () => (
 
       <Sometext />
       <Route exact path="/springboard" component={Springboard} />
+      <Route path="/" component={Aboutme} />
 
       <Social />
     </div>

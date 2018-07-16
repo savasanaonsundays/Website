@@ -14,7 +14,7 @@ router.get('/aboutMe',(req,res) => {
     mongoose.connect(db)
     const aboutMe = mongoose.model("content")
     aboutMe.findOne({name:"aboutMe"}).then(stuff => {
-    res.send(stuff.text)
+    res.send(stuff)
 })
 })
 
