@@ -1,3 +1,4 @@
+// require('./env').config();
 const mongoose = require('mongoose');
 const express = require('express');
 
@@ -6,6 +7,9 @@ const bookings = require('./routes/api/bookings');
 const app = express();
 
 const bodyParser = require('body-parser'); //2.TO BE ABLE TO USE REQ.BODY
+const cors = require('cors')
+app.use(cors({ origin: process.env.CORS_ORIGINS }))
+
 const passport = require('passport'); //
 
 const admin = require('./routes/api/admins');
