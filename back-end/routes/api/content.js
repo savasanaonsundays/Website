@@ -18,5 +18,22 @@ router.get('/aboutMe',(req,res) => {
 })
 })
 
+
+
+
+router.post('/aboutMe/update',(req,res) => {
+
+    mongoose.connect(db)
+    const AboutMe = mongoose.model('content')
+    const newTest = new Test({ //8.CREATE NEW USER
+    layers: req.body.layers //WILL COME FROM THE FORM
+    });
+    
+    newTest.save()
+    .then(test => res.json(test))
+    
+    })    
+    
+
 module.exports = router;
 
