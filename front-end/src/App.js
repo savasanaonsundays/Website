@@ -31,7 +31,7 @@ import './App.css';
 import Springboard from './Components/Springboard';
 import Landing from './Components/Description';
 import Navbar from './Components/Navbar';
-import Social from './Components/Social';
+import Footer from './Components/Footer';
 import Aboutme from './Components/Aboutme';
 import Hero from './Components/Hero';
 
@@ -44,7 +44,7 @@ const App = () => (
       <Route exact path="/" component={Springboard} />
       <Route path="/aboutme" component={Aboutme} />
 
-      <Social />
+      <Footer />
     </div>
   </Router>
 );
