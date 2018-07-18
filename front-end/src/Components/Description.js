@@ -6,7 +6,7 @@ import React, { Component } from 'react';
 //     )
 // };
 
-class Sometext extends Component {
+class Landing extends Component {
   constructor() {
     super();
     this.state = {
@@ -19,4 +19,4 @@ class Sometext extends Component {
   }
 }
 
-export default Sometext;
+export default Landing;

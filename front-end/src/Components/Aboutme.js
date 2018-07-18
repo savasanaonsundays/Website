@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './aboutme.css';
 
 export default class Aboutme extends Component {
   constructor(props) {
@@ -27,8 +28,11 @@ export default class Aboutme extends Component {
 
   render() {
     return (
-      <div>
-        <p>{this.state.response}</p>
+      <div className="background">
+        <div className="child">
+          <p>{this.state.response}</p>
+        </div>
+        <div className="child">{this.state.response}</div>
       </div>
     );
   }
