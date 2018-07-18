@@ -8,15 +8,82 @@ const db = require('../../config/keys').mongoURI;
 const express = require('express')
 const router = express.Router();
 
-router.get('/test', (req,res) => res.json({msg: "content works"}));
+
+// GET REQUESTS
 
 router.get('/aboutMe',(req,res) => {
     mongoose.connect(db)
     const aboutMe = mongoose.model("content")
-    aboutMe.findOne({name:"aboutMe"}).then(stuff => {
-    res.send(stuff)
+    aboutMe.findOne({name:"aboutMe"}).then(aboutMe => {
+    res.send(aboutMe)
 })
 })
+
+router.get('/prices',(req,res) => {
+    mongoose.connect(db)
+    const prices = mongoose.model("content")
+    prices.findOne({name:"prices"}).then(prices => {
+    res.send(prices)
+})
+})
+
+router.get('/qualifications',(req,res) => {
+    mongoose.connect(db)
+    const qualifications = mongoose.model("content")
+    qualifications.findOne({name:"qualifications"}).then(qualifications => {
+    res.send(qualifications)
+})
+})
+
+
+router.get('/contents',(req,res) => {
+    mongoose.connect(db)
+    const contents = mongoose.model("content")
+    contents.findOne({}).then(contents=> {
+    res.send(contents)
+})
+})
+
+
+// POST REQUESTS
+
+// router.post('/aboutMe/post',(req,res) => {
+
+//     mongoose.connect(db)
+//     const AboutMe = mongoose.model('content')
+//     const newTest = new Test({ 
+//         layers: req.body.layers 
+//       });
+
+//     newTest.save()
+//     .then(test => res.json(test))
+
+// })
+
+
+
+
+// UPDATE REQUESTS
+
+
+
+router.put('/:id',(req,res) => {
+    mongoose.connect(db)
+    const contents = mongoose.model('content')
+    console.log(req.params.id)
+    contents.findByIdAndUpdate(req.params.id, req.body).then(
+        res.json(contents)
+    )
+})
+
+//contents.findByIdAndUpdate(req.params.id, req.body)
+
+
+
+
+
+
+
 
 module.exports = router;
 
