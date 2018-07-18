@@ -1,4 +1,10 @@
 body {
-  background-color: lightslategray;
+  background: 
+  /* top, transparent red, faked with gradient */ linear-gradient(
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.6)
+    ),
+    /* bottom, image */ url(./Assets/background/background.jpg);
   background-size: cover;
+  background-position-y: 30%;
 }
