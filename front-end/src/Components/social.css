@@ -1,3 +1,12 @@
 i {
   color: black;
 }
+
+.socialimg {
+  height: 30px;
+  width: 30px;
+}
+
+.custombar {
+  justify-content: center;
+}

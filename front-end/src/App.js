@@ -33,13 +33,15 @@ import Landing from './Components/Description';
 import Navbar from './Components/Navbar';
 import Social from './Components/Social';
 import Aboutme from './Components/Aboutme';
+import Hero from './Components/Hero';
 
 const App = () => (
   <Router>
     <div className="App">
-      <Navbar />
-
-      <Route exact path="/springboard" component={Springboard} />
+      <Hero>
+        <Navbar />
+      </Hero>
+      <Route exact path="/" component={Springboard} />
       <Route path="/aboutme" component={Aboutme} />
 
       <Social />
