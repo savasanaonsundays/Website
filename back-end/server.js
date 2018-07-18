@@ -12,8 +12,8 @@ app.use(cors({ origin: process.env.CORS_ORIGINS }))
 
 const passport = require('passport'); //
 
-const admin = require('./routes/api/admins');
-
+const adminRoute = require('./routes/api/admins');
+const testsRoute = require('./routes/api/tests');
 const test = require('./models/test')
 const content = require('./models/Content');
 const contentRoute = require('./routes/api/content')
@@ -22,19 +22,22 @@ const contentRoute = require('./routes/api/content')
 const db = require('./config/keys').mongoURI;
 
 
+// Body parser middleware 5.NOW CAN ACCESS REQUEST.BODY WHATEVER
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 
 // Routes
 
-app.use('/api/admin' , admin);
+app.use('/api/admin' , adminRoute);
 
 app.use('/api/bookings', bookings);
 
 app.use('/api/content', contentRoute);
 
+app.use('/api/tests', testsRoute)
 
-// Body parser middleware 5.NOW CAN ACCESS REQUEST.BODY WHATEVER
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+
 
 
 
