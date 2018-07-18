@@ -1,40 +1,25 @@
 import React from 'react';
 import { Nav, NavItem, NavLink } from 'reactstrap';
-
-import ReactDOM from 'react-dom';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { fab } from '@fortawesome/free-brands-svg-icons';
-import {
-  faCheckSquare,
-  faCoffee,
-  facebook,
-  instagram,
-  envelope
-} from '@fortawesome/free-solid-svg-icons';
-
-library.add(fab);
+import 'font-awesome/css/font-awesome.min.css';
+import './social.css';
 
 export default () => {
   return (
     <div>
-      <p>List Based</p>
-
-      <Nav className="navbar fixed-bottom navbar-light bg-light">
+      <Nav className="navbar fixed-bottom navbar-light bg-light custombar">
         <NavItem>
-          <FontAwesomeIcon icon="coffee" />
           <NavLink href="#">
-            <FontAwesomeIcon icon="facebook" />
+            <i className="fa fa-facebook-official fa-2x" />
           </NavLink>
         </NavItem>
         <NavItem>
           <NavLink href="#">
-            <FontAwesomeIcon icon="instagram" />
+            <i className="fa fa-instagram fa-2x" />
           </NavLink>
         </NavItem>
         <NavItem>
           <NavLink href="#">
-            <FontAwesomeIcon icon="envelope" />
+            <i className="fa fa-send fa-2x" />
           </NavLink>
         </NavItem>
       </Nav>

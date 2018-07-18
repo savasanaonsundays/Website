@@ -1,0 +1,9 @@
+.background {
+  background-color: lightgrey;
+  padding: 50px;
+  display: flex;
+}
+
+.child {
+  padding: 20px;
+}
