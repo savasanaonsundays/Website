@@ -15,6 +15,8 @@ import {
   DropdownItem
 } from 'reactstrap';
 
+import './navbar.css';
+
 export default class Navman extends React.Component {
   constructor(props) {
     super(props);
@@ -34,29 +36,39 @@ export default class Navman extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar className="navbar sticky-top" light expand="md" id="navynavy">
           <NavbarBrand href="/">Savasana on Sundays</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Private Lessons</NavLink>
+                <NavLink class="navtext" href="/components/">
+                  Private Lessons
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">Class Timetable</NavLink>
+                <NavLink class="navtext" href="/components/">
+                  Class Timetable
+                </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
+                <NavLink
+                  class="navtext"
+                  href="https://github.com/reactstrap/reactstrap"
+                >
                   Massage
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
+                <NavLink
+                  class="navtext"
+                  href="https://github.com/reactstrap/reactstrap"
+                >
                   Oil Store
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">
+                <NavLink class="navtext" href="./aboutme">
                   About Us
                 </NavLink>
               </NavItem>
