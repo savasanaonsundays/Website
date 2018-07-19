@@ -10,7 +10,7 @@ import gmail from '../Assets/social/gmail.png';
 export default () => {
   return (
     <div>
-      <footer className="navbar bottom bg-info text-white p-9 text-center">
+      <footer className="navbar bottom bg-dark text-white p-9 text-center custombar">
         <a href="https://www.facebook.com/savasanaonsundays/" target="_blank">
           <img className="socialimg" src={twitter} />
         </a>
@@ -20,7 +20,6 @@ export default () => {
         <Link to="../">
           <img className="socialimg" src={gmail} />
         </Link>
-        Copyright &copy; {new Date().getFullYear()} Savasana on Sundays
       </footer>
     </div>
   );

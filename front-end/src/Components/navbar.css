@@ -1,6 +1,7 @@
 #navynavy {
-  background-color: azure;
-  opacity: 0.5;
+  color: black;
+  background-color: white;
+  opacity: 0.7;
   height: 11vh;
 }
 .navtext {
