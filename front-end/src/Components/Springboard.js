@@ -14,44 +14,44 @@ class Springboard extends Component {
       <div className="Springboard">
         <Container>
           <Row>
-            <Col>
+            <div className="col-md-4">
               <Item
                 title="Private Lessons"
                 image={require('../Assets/springboard/yoga.png')}
               />
-            </Col>
-            <Col>
+            </div>
+            <div className="col-md-4">
               <Item
                 title="Oil Store"
                 image={require('../Assets/springboard/oil.png')}
               />
-            </Col>
-            <Col>
+            </div>
+            <div className="col-md-4">
               <Item
                 title="Blog"
                 image={require('../Assets/springboard/blog.jpeg')}
               />
-            </Col>
+            </div>
           </Row>
           <Row>
-            <Col>
+            <div className="col-md-4">
               <Item
                 title="Class Timetable"
                 image={require('../Assets/springboard/timetable.jpeg')}
               />
-            </Col>
-            <Col>
+            </div>
+            <div className="col-md-4">
               <Item
                 title="Massage"
                 image={require('../Assets/springboard/back.png')}
               />
-            </Col>
-            <Col>
+            </div>
+            <div className="col-md-4">
               <Item
                 title="About Us"
                 image={require('../Assets/springboard/image.png')}
               />
-            </Col>
+            </div>
           </Row>
         </Container>
       </div>
