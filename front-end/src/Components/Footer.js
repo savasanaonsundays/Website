@@ -10,31 +10,6 @@ import gmail from '../Assets/social/gmail.png';
 export default () => {
   return (
     <div>
-      {/*
-      <Nav className="navbar bottom navbar-light bg-dark custombar">
-        <NavItem>
-          <NavLink
-            href="https://www.facebook.com/savasanaonsundays/"
-            target="_blank"
-          >
-            <img className="socialimg" src={twitter} />
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <NavLink
-            href="https://www.instagram.com/savasanaonsundays/"
-            target="_blank"
-          >
-            <img className="socialimg" src={instagram} />
-          </NavLink>
-        </NavItem>
-        <NavItem>
-          <Link to="../">
-            <img className="socialimg" src={gmail} />
-          </Link>
-        </NavItem>
-      </Nav>
-*/}
       <footer className="navbar bottom bg-dark text-white p-9 text-center custombar">
         <a href="https://www.facebook.com/savasanaonsundays/" target="_blank">
           <img className="socialimg" src={twitter} />
