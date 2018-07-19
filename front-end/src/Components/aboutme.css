@@ -2,6 +2,7 @@
   background-color: lightgrey;
   padding: 50px;
   display: flex;
+  height: 100vh;
 }
 
 .child {

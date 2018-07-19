@@ -1,13 +1,13 @@
 .lowimage {
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
-  height: 200px;
-  object-fit: fill;
+  height: 250px;
+  object-fit: cover;
 }
 
 .individualcard {
   padding-bottom: 10px;
   vertical-align: middle;
-  background-color: yellow;
+  background-color: #ffef9c;
   text-align: center;
 }

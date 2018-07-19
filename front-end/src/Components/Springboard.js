@@ -3,20 +3,6 @@ import './springboard.css';
 import { Container, Row, Col } from 'reactstrap';
 import Item from './Card';
 
-// export default class Springboard extends React.Component {
-//     render() {
-//         return (
-//             <div> This a placeholder for the Springboard menu </div>
-//         )
-//     }
-// }
-
-// const Springboard = () => {
-//     return (<div className="HelloWorld">Hello World!</div>);
-//   };
-
-//   export default Springboard;
-
 class Springboard extends Component {
   constructor(props) {
     super(props);
@@ -35,21 +21,36 @@ class Springboard extends Component {
               />
             </Col>
             <Col>
-              <Item title="Oil Store" />
+              <Item
+                title="Oil Store"
+                image={require('../Assets/springboard/oil.png')}
+              />
             </Col>
             <Col>
-              <Item title="Blog" />
+              <Item
+                title="Blog"
+                image={require('../Assets/springboard/blog.jpeg')}
+              />
             </Col>
           </Row>
           <Row>
             <Col>
-              <Item title="Class Timetable" />
+              <Item
+                title="Class Timetable"
+                image={require('../Assets/springboard/timetable.jpeg')}
+              />
             </Col>
             <Col>
-              <Item title="Massage" />
+              <Item
+                title="Massage"
+                image={require('../Assets/springboard/back.png')}
+              />
             </Col>
             <Col>
-              <Item title="About Us" />
+              <Item
+                title="About Us"
+                image={require('../Assets/springboard/image.png')}
+              />
             </Col>
           </Row>
         </Container>

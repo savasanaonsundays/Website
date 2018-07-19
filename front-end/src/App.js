@@ -1,28 +1,3 @@
-// import React, { Component } from 'react';
-// import './App.css';
-
-// import Navman from './Components/Navbar';
-
-// const App = () => {
-//   return (
-//   <Navman />
-
-//   )
-// };
-
-// class App extends Component {
-//   render() {
-//     return (
-
-//         <div>
-//             <Navman />
-
-//       </div>
-//     );
-//   }
-// }
-// add test comment
-// Dependencies
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -34,15 +9,15 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Aboutme from './Components/Aboutme';
 import Hero from './Components/Hero';
+import RealHero from './Components/RealHero';
 
 const App = () => (
   <Router>
     <div className="App">
-      <Hero>
-        <Navbar />
-      </Hero>
+      <Route exact path="/" component={RealHero} />
       <Route exact path="/" component={Springboard} />
-      <Route path="/aboutme" component={Aboutme} />
+      <Route exact path="/aboutme" className="notHome" component={Navbar} />
+      <Route exact path="/aboutme" component={Aboutme} />
 
       <Footer />
     </div>

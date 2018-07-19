@@ -42,8 +42,8 @@ export default class Navman extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink class="navtext" href="/components/">
-                  Private Lessons
+                <NavLink class="navtext" href="/pricing">
+                  Pricing
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -56,22 +56,24 @@ export default class Navman extends React.Component {
                   class="navtext"
                   href="https://github.com/reactstrap/reactstrap"
                 >
-                  Massage
+                  Private Booking
                 </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink
-                  class="navtext"
-                  href="https://github.com/reactstrap/reactstrap"
-                >
-                  Oil Store
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink class="navtext" href="./aboutme">
-                  About Us
-                </NavLink>
-              </NavItem>
+
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  Menu
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>Private Lessons</DropdownItem>
+                  <DropdownItem>Class Timetable</DropdownItem>
+                  <DropdownItem>Massage</DropdownItem>
+                  <DropdownItem>Oilstore</DropdownItem>
+                  <DropdownItem>About Us</DropdownItem>
+                  <DropdownItem divider />
+                  <DropdownItem>Close</DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
             </Nav>
           </Collapse>
         </Navbar>
