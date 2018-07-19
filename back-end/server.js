@@ -2,8 +2,8 @@
 const mongoose = require('mongoose');
 const express = require('express');
 
-
-const bookings = require('./routes/api/bookings');
+const booking = require('./models/Booking')
+const bookingsRoute = require('./routes/api/bookings');
 const app = express();
 
 const bodyParser = require('body-parser'); //2.TO BE ABLE TO USE REQ.BODY
@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 
 app.use('/api/admin' , adminRoute);
 
-app.use('/api/bookings', bookings);
+app.use('/api/bookings', bookingsRoute);
 
 app.use('/api/content', contentRoute);
 
@@ -62,8 +62,6 @@ require('./config/passport')(passport);//PASSING IN PASSPORT
 
 const port = process.env.PORT ||7000;
 
-
-app.get('/', (req, res) => res.send('Hello Elouise'));
 
 app.listen(port, () => console.log(`server is running on  port ${port}`));
 
