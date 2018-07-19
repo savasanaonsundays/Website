@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './aboutme.css';
 
-export default class Aboutme extends Component {
+export default class Prices extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,9 +11,9 @@ export default class Aboutme extends Component {
 
   componentDidMount() {
     //we callApi
-    fetch('/api/content/AboutMe')
+    fetch('/api/content/prices')
       .then(res => res.json())
-      .then(aboutme => this.setState({ response: aboutme.text }));
+      .then(prices => this.setState({ response: prices.text }));
   }
 
   render() {
