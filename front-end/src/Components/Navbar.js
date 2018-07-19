@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router';
 
 import {
   Collapse,
@@ -42,20 +41,17 @@ export default class Navman extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink class="navtext" href="/pricing">
+                <NavLink className="navtext" href="/pricing">
                   Pricing
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink class="navtext" href="/components/">
+                <NavLink className="navtext" href="/components/">
                   Class Timetable
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink
-                  class="navtext"
-                  href="https://github.com/reactstrap/reactstrap"
-                >
+                <NavLink className="navtext" href="/">
                   Private Booking
                 </NavLink>
               </NavItem>
