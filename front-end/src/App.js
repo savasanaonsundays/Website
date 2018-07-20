@@ -22,16 +22,18 @@ import Qualifications from './Components/Qualifications';
 import Hero from './Components/Hero';
 import RealHero from './Components/RealHero';
 
+//!/!/!/!/ ELOUISE RUN THIS FUNCTION TO LOGOUT A USER. MAKE SURE YOU IMPORT STORE AND LOGOUTADMIN THOUGH
+// store.dispatch(logoutAdmin())
+
 if (localStorage.jwtToken) {
   setAuthToken(localStorage.jwtToken);
 
   const decoded = jwt_decode(localStorage.jwtToken);
   store.dispatch(setCurrentAdmin(decoded));
-
   const currentTime = Date.now() / 1000;
   if (decoded.exp < currentTime) {
     store.dispatch(logoutAdmin());
-    // window.location.href = '/login'
+    window.location.href = '/login';
   }
 }
 
