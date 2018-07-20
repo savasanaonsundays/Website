@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "node back-end/server.js",
-    "heroku-postbuild": "cd front-end/ && npm install && npm install --only=dev && npm run build"
+    "heroku-postbuild": "cd front-end/ && npm install && npm install --only=dev && npm run build && cd ../back-end && npm install"
 
   },
   "cacheDirectories": [
