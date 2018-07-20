@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 
 // Routes
 
-app.use('/api/admin' , adminRoute);
+app.use('/api/admins' , adminRoute);
 
 app.use('/api/bookings', bookingsRoute);
 
@@ -61,6 +61,78 @@ require('./config/passport')(passport);//PASSING IN PASSPORT
 
 
 const port = process.env.PORT ||7000;
+
+
+app.listen(port, () => console.log(`server is running on  port ${port}`));
+
+
+
+
+
+
+// require('./env').config();
+const mongoose = require('mongoose');
+const express = require('express');
+
+const bookings = require('./routes/api/bookings');
+const app = express();
+
+const bodyParser = require('body-parser'); //2.TO BE ABLE TO USE REQ.BODY
+
+// Body parser middleware 5.NOW CAN ACCESS REQUEST.BODY WHATEVER
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+
+const cors = require('cors')
+app.use(cors({ origin: process.env.CORS_ORIGINS }))
+
+const passport = require('passport'); //
+
+const admin = require('./routes/api/admins');
+
+const test = require('./models/test')
+const content = require('./models/Content');
+const contentRoute = require('./routes/api/content')
+
+//DB Config
+const db = require('./config/keys').mongoURI;
+
+
+
+// Routes
+
+app.use('/api/admins' , admin);
+
+app.use('/api/bookings', bookings);
+
+app.use('/api/content', contentRoute);
+
+// 
+
+
+//connect to mongoDB
+mongoose
+  .connect(db)
+  .then(() => console.log("MongoDB Connected"))
+  .catch(err => console.log(err));
+
+
+
+// Passport middleware
+app.use(passport.initialize());
+
+// Passport Config
+require('./config/passport')(passport);//PASSING IN PASSPORT
+
+
+//Admin routes
+
+
+
+const port = process.env.PORT ||7000;
+
+
 
 
 app.listen(port, () => console.log(`server is running on  port ${port}`));
