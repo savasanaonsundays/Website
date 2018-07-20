@@ -1,9 +1,7 @@
 import React from 'react';
-import { Nav, NavItem, NavLink } from 'reactstrap';
 import { Link } from 'react-router-dom';
-//import "font-awesome/css/font-awesome.min.css";
 import './footer.css';
-import twitter from '../Assets/social/twitter.png';
+import facebook from '../Assets/social/facebook.png';
 import instagram from '../Assets/social/instagram.png';
 import gmail from '../Assets/social/gmail.png';
 
@@ -12,7 +10,7 @@ export default () => {
     <div>
       <footer className="navbar bottom bg-dark text-white p-9 text-center custombar">
         <a href="https://www.facebook.com/savasanaonsundays/" target="_blank">
-          <img className="socialimg" src={twitter} />
+          <img className="socialimg" src={facebook} />
         </a>
         <a href="https://www.instagram.com/savasanaonsundays/" target="_blank">
           <img className="socialimg" src={instagram} />
