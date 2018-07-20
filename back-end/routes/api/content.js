@@ -31,7 +31,7 @@ router.get('/qualifications',(req,res) => {
     mongoose.connect(db)
     const qualifications = mongoose.model("content")
     qualifications.findOne({name:"qualifications"}).then(qualifications => {
-    res.send(qualifications)
+    res.send(qualifications.text)
 })
 })
 
