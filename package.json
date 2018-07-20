@@ -6,12 +6,12 @@
     "node": "8.9.x"
   },
   "scripts": {
-    "start": "node server/back-end/server.js",
+    "start": "node server",
     "heroku-postbuild": "cd front-end/ && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
   },
   "cacheDirectories": [
     "node_modules",
-    "react-ui/node_modules"
+    "front-end/node_modules"
   ],
   "dependencies": {
     "express": "^4.16.3"
