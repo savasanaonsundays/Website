@@ -31,7 +31,7 @@ class Navman extends React.Component {
 
   onLogoutClick(e) {
     e.preventDefault();
-    this.props.logoutUser();
+    this.props.logoutAdmin();
   }
 
   toggle() {
@@ -61,6 +61,20 @@ class Navman extends React.Component {
               <NavItem>
                 <NavLink className="navtext" href="/">
                   Private Booking
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className="navtext" href="/register">
+                  register
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  className="navtext"
+                  href=""
+                  onClick={this.onLogoutClick.bind(this)}
+                >
+                  logout
                 </NavLink>
               </NavItem>
 
