@@ -13,7 +13,7 @@ const store = createStore(
   compose(
     //COMPOSE IS
     applyMiddleware(...middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() //SO THAT WE CAN UES THE REDUX BROWSER TOOLS
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
   )
 );
 
