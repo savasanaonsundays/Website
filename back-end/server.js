@@ -29,7 +29,7 @@ app.use(bodyParser.json());
 
 // Routes
 
-app.use('/api/admin' , adminRoute);
+app.use('/api/admins' , adminRoute);
 
 app.use('/api/bookings', bookingsRoute);
 
@@ -64,9 +64,3 @@ const port = process.env.PORT ||7000;
 
 
 app.listen(port, () => console.log(`server is running on  port ${port}`));
-
-
-
-
-
-
