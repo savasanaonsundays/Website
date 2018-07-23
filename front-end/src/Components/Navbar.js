@@ -13,10 +13,13 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
+import { logoutAdmin } from '../actions/authActions';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import './navbar.css';
 
-export default class Navman extends React.Component {
+class Navman extends React.Component {
   constructor(props) {
     super(props);
 
@@ -24,6 +27,11 @@ export default class Navman extends React.Component {
     this.state = {
       isOpen: false
     };
+  }
+
+  onLogoutClick(e) {
+    e.preventDefault();
+    this.props.logoutAdmin();
   }
 
   toggle() {
@@ -55,6 +63,20 @@ export default class Navman extends React.Component {
                   Private Booking
                 </NavLink>
               </NavItem>
+              <NavItem>
+                <NavLink className="navtext" href="/register">
+                  register
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink
+                  className="navtext"
+                  href=""
+                  onClick={this.onLogoutClick.bind(this)}
+                >
+                  logout
+                </NavLink>
+              </NavItem>
 
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -77,3 +99,17 @@ export default class Navman extends React.Component {
     );
   }
 }
+
+Navman.propTypes = {
+  logoutAdmin: PropTypes.func.isRequired,
+  auth: PropTypes.object.isRequired
+};
+
+const mapStateToProps = state => ({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { logoutAdmin }
+)(Navman);
