@@ -1,26 +1,28 @@
-import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import './App.css';
+import "./App.css";
 
-import Register from './Components/auth/Register';
-import Login from './Components/auth/Login';
-import jwt_decode from 'jwt-decode';
-import setAuthToken from './utils/setAuthToken';
-import { setCurrentAdmin, logoutAdmin } from './actions/authActions';
-import { Provider } from 'react-redux';
-import store from './store';
+import Register from "./Components/auth/Register";
+import Login from "./Components/auth/Login";
+import jwt_decode from "jwt-decode";
+import setAuthToken from "./utils/setAuthToken";
+import { setCurrentAdmin, logoutAdmin } from "./actions/authActions";
+import { Provider } from "react-redux";
+import store from "./store";
 
-import Springboard from './Components/Springboard';
-import Landing from './Components/Description';
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
-import Aboutme from './Components/Aboutme';
-import Bookings from './Components/Bookings';
-import Prices from './Components/Prices';
-import Qualifications from './Components/Qualifications';
-import Hero from './Components/Hero';
-import RealHero from './Components/RealHero';
+import Springboard from "./Components/Springboard";
+import Landing from "./Components/Description";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import Aboutme from "./Components/Aboutme";
+import Bookings from "./Components/Bookings";
+import Prices from "./Components/Prices";
+import Qualifications from "./Components/Qualifications";
+import Hero from "./Components/Hero";
+import RealHero from "./Components/RealHero";
+import PrivateYoga from "./Components/PrivateYoga";
+import PrivateMassage from "./Components/PrivateMassage";
 
 //!/!/!/!/ ELOUISE RUN THIS FUNCTION TO LOGOUT A USER. MAKE SURE YOU IMPORT STORE AND LOGOUTADMIN THOUGH
 // store.dispatch(logoutAdmin())
@@ -33,7 +35,7 @@ if (localStorage.jwtToken) {
   const currentTime = Date.now() / 1000;
   if (decoded.exp < currentTime) {
     store.dispatch(logoutAdmin());
-    window.location.href = '/login';
+    window.location.href = "/login";
   }
 }
 
@@ -57,7 +59,8 @@ const App = () => (
         <Route exact path="/aboutme" component={Aboutme} />
         <Route exact path="/qualifications" component={Qualifications} />
         <Route exact path="/pricing" component={Prices} />
-
+        <Route exact path="/privateyoga" component={PrivateYoga} />
+        <Route exact path="/privatemassage" component={PrivateMassage} />
         <Footer />
       </div>
     </Router>
