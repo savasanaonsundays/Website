@@ -50,7 +50,7 @@ const App = () => (
           className="notHome"
           component={Navbar}
         />
-        <Route exact path="/prices" className="notHome" component={Navbar} />
+        <Route exact path="/pricing" className="notHome" component={Navbar} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
 
