@@ -1,4 +1,5 @@
 import React from 'react';
+import axios from 'axios';
 import {
   Container,
   Row,
@@ -25,27 +26,28 @@ class BookingForm extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('Form has been submitted ' + this.state.value);
-    fetch('api/bookings/privatebooking', {
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        session: event.target.session.value,
-        date: event.target.date.value,
-        hours: event.target.hours.value,
-        name: event.target.name.value,
-        email: event.target.email.value,
-        tel: event.target.tel.value,
-        health: event.target.health.value,
-        comment: event.target.comment.value
+    event.preventDefault(); // DO NO TOUCH
+
+    const data = {
+      session: event.target.session.value,
+      date: event.target.date.value,
+      hours: event.target.hours.value,
+      name: event.target.name.value,
+      email: event.target.email.value,
+      tel: event.target.tel.value,
+      health: event.target.health.value,
+      comment: event.target.comment.value
+    };
+
+    axios
+      .post('api/bookings/privatebooking', data)
+      .then(resp => {
+        alert('Form has been submitted ' + this.state.value);
+        window.location.href = '/';
       })
-    }).then(resp => {
-      console.dir(resp);
-    });
-    event.preventDefault();
+      .catch(err => {
+        alert('fill in required fields');
+      });
   }
   render() {
     return (
@@ -161,7 +163,7 @@ class BookingForm extends React.Component {
           <Row>
             <Col sm="12" md={{ size: 8, offset: 11 }}>
               <Button color="danger" size="sm" href="/bookingform">
-                Cancel
+                Clear
               </Button>
             </Col>
           </Row>
