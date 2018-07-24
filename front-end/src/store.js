@@ -10,11 +10,8 @@ const store = createStore(
   //these are part of redux (create store and apply middleware)
   rootReducer,
   initialState,
-  compose(
-    //COMPOSE IS
-    applyMiddleware(...middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
-  )
+
+  applyMiddleware(...middleware)
 );
 
 export default store;
