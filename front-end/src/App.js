@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 
@@ -10,6 +10,7 @@ import setAuthToken from './utils/setAuthToken';
 import { setCurrentAdmin, logoutAdmin } from './actions/authActions';
 import { Provider } from 'react-redux';
 import store from './store';
+import PrivateRoute from './Components/common/PrivateRoute';
 import Springboard from './Components/Springboard';
 import Landing from './Components/Description';
 import Navbar from './Components/Navbar';
@@ -21,6 +22,8 @@ import Qualifications from './Components/Qualifications';
 import Hero from './Components/Hero';
 import RealHero from './Components/RealHero';
 import BookingForm from './Components/BookingForm';
+
+import Dashboard from './Components/dashboard/Dashboard';
 
 //!/!/!/!/ ELOUISE RUN THIS FUNCTION TO LOGOUT A USER. MAKE SURE YOU IMPORT STORE AND LOGOUTADMIN THOUGH
 // store.dispatch(logoutAdmin())
@@ -53,7 +56,9 @@ const App = () => (
         <Route exact path="/pricing" className="notHome" component={Navbar} />
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
-
+        <Switch>
+          <PrivateRoute exact path="/dashboard" component={Dashboard} />
+        </Switch>
         <Route exact path="/aboutme" component={Aboutme} />
         <Route exact path="/qualifications" component={Qualifications} />
         <Route exact path="/pricing" component={Prices} />
