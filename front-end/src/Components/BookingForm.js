@@ -52,15 +52,20 @@ class BookingForm extends React.Component {
       <Container>
         <Form onSubmit={this.handleSubmit}>
           <FormGroup>
-            <Label for="BookingFormEmail">
-              <h1>Private Booking Form</h1>
-            </Label>
+            <Row>
+              <Col sm="12" md={{ size: 8, offset: 4 }}>
+                <Label for="BookingFormEmail">
+                  <h1>Private Booking Form</h1>
+                </Label>
+              </Col>
+            </Row>
             <Input plaintext>
               <b>
                 please fill out details below, all fields with (*) are required
               </b>
             </Input>
           </FormGroup>
+
           <FormGroup>
             <Label for="BookingFormSession">Choose Session</Label>
             <Input type="select" name="session" id="BookingFormSession">
@@ -68,6 +73,7 @@ class BookingForm extends React.Component {
               <option>Massage Session</option>
             </Input>
           </FormGroup>
+
           <FormGroup>
             <Label for="BookingFormDate">Date</Label>
             <Input
@@ -154,7 +160,7 @@ class BookingForm extends React.Component {
 
           <Row>
             <Col sm="12" md={{ size: 8, offset: 11 }}>
-              <Button color="danger" size="sm">
+              <Button color="danger" size="sm" href="/bookingform">
                 Cancel
               </Button>
             </Col>
