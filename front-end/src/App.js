@@ -20,8 +20,7 @@ import Prices from './Components/Prices';
 import Qualifications from './Components/Qualifications';
 import Hero from './Components/Hero';
 import RealHero from './Components/RealHero';
-import PrivateYoga from './Components/PrivateYoga';
-import PrivateMassage from './Components/PrivateMassage';
+import BookingForm from './Components/BookingForm';
 
 //!/!/!/!/ ELOUISE RUN THIS FUNCTION TO LOGOUT A USER. MAKE SURE YOU IMPORT STORE AND LOGOUTADMIN THOUGH
 // store.dispatch(logoutAdmin())
@@ -58,8 +57,7 @@ const App = () => (
         <Route exact path="/aboutme" component={Aboutme} />
         <Route exact path="/qualifications" component={Qualifications} />
         <Route exact path="/pricing" component={Prices} />
-        <Route exact path="/privateyoga" component={PrivateYoga} />
-        <Route exact path="/privatemassage" component={PrivateMassage} />
+        <Route exact path="/bookingform" component={BookingForm} />
 
         <Footer />
       </div>
