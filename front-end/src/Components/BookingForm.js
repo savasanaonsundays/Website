@@ -11,7 +11,7 @@ import {
   FormText
 } from 'reactstrap';
 
-class PrivateMassage extends React.Component {
+class BookingForm extends React.Component {
   constructor(props) {
     super(props);
     this.state = { value: '' };
@@ -26,6 +26,25 @@ class PrivateMassage extends React.Component {
 
   handleSubmit(event) {
     alert('Form has been submitted ' + this.state.value);
+    fetch('api/bookings/privatebooking', {
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        session: event.target.session.value,
+        date: event.target.date.value,
+        hours: event.target.hours.value,
+        name: event.target.name.value,
+        email: event.target.email.value,
+        tel: event.target.tel.value,
+        health: event.target.health.value,
+        comment: event.target.comment.value
+      })
+    }).then(resp => {
+      console.dir(resp);
+    });
     event.preventDefault();
   }
   render() {
@@ -33,10 +52,8 @@ class PrivateMassage extends React.Component {
       <Container>
         <Form onSubmit={this.handleSubmit}>
           <FormGroup>
-            <Label for="PrivateMassageEmail">
-              <h1>
-                Private <u>Massage</u> Booking Form
-              </h1>
+            <Label for="BookingFormEmail">
+              <h1>Private Booking Form</h1>
             </Label>
             <Input plaintext>
               <b>
@@ -44,25 +61,32 @@ class PrivateMassage extends React.Component {
               </b>
             </Input>
           </FormGroup>
-
           <FormGroup>
-            <Label for="PrivateMassageDate">*Date</Label>
+            <Label for="BookingFormSession">Choose Session</Label>
+            <Input type="select" name="session" id="BookingFormSession">
+              <option>Yoga Session</option>
+              <option>Massage Session</option>
+            </Input>
+          </FormGroup>
+          <FormGroup>
+            <Label for="BookingFormDate">Date</Label>
             <Input
               type="date"
               name="date"
-              id="PrivateMassageDate"
+              id="BookingFormDate"
               placeholder="Date"
             />
           </FormGroup>
 
           <FormGroup>
-            <Label for="PrivateMassageSelectTime">*Hours</Label>
+            <Label for="BookingFormSelectTime">Hours</Label>
             <Input
               type="select"
-              name="selectMulti"
-              id="PrivateMassageSelectTime"
+              name="hours"
+              id="BookingFormSelectTime"
               multiple
             >
+              <option>--</option>
               <option>10AM</option>
               <option>11AM</option>
               <option>12PM</option>
@@ -74,55 +98,57 @@ class PrivateMassage extends React.Component {
             </Input>
           </FormGroup>
           <FormGroup>
-            <Label for="PrivateMassageName">*Name</Label>
+            <Label for="BookingFormName">*Name</Label>
             <Input
               type="text"
               name="name"
-              id="PrivateMassageName"
+              id="BookingFormName"
               placeholder="Name"
             />
           </FormGroup>
           <FormGroup>
-            <Label for="PrivateMassageEmail">*Email</Label>
+            <Label for="BookingFormEmail">*Email</Label>
             <Input
               type="email"
               name="email"
-              id="PrivateMassageEmail"
+              id="BookingFormEmail"
               placeholder="Email"
             />
           </FormGroup>
 
           <FormGroup>
-            <Label for="PrivateMassageTel">*Phone Number</Label>
+            <Label for="BookingFormTel">Phone Number</Label>
             <Input
               type="tel"
               name="tel"
-              id="PrivateMassageTel"
+              id="BookingFormTel"
               placeholder="Phone Number"
             />
           </FormGroup>
 
           <FormGroup>
-            <Label for="PrivateMassageHealth">*Health Issues</Label>
+            <Label for="BookingFormHealth">Health Issues</Label>
             <Input
               type="textarea"
-              name="text"
-              id="PrivateMassageHealth"
+              name="health"
+              rows="7"
+              id="BookingFormHealth"
               placeholder="Please write down as detail as possible any health issues, injuries, or medications that you are taking"
             />
           </FormGroup>
 
           <FormGroup>
-            <Label for="PrivateMassageComment">Comment</Label>
+            <Label for="BookingFormComment">Comment</Label>
             <Input
               type="textarea"
-              name="text"
-              id="PrivateMassageComment"
+              rows="7"
+              name="comment"
+              id="BookingFormComment"
               placeholder="Please post any questions or anything else you would like to mention here"
             />
           </FormGroup>
 
-          <Button color="primary" size="lg" value="submit" block>
+          <Button color="primary" size="lg" block>
             Submit
           </Button>
 
@@ -139,4 +165,4 @@ class PrivateMassage extends React.Component {
   }
 }
 
-export default PrivateMassage;
+export default BookingForm;
