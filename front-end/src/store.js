@@ -11,7 +11,11 @@ const store = createStore(
   rootReducer,
   initialState,
 
-  applyMiddleware(...middleware)
+  compose(
+    //COMPOSE IS
+    applyMiddleware(...middleware),
+    compose
+  )
 );
 
 export default store;
