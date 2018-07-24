@@ -10,7 +10,6 @@ import setAuthToken from './utils/setAuthToken';
 import { setCurrentAdmin, logoutAdmin } from './actions/authActions';
 import { Provider } from 'react-redux';
 import store from './store';
-
 import Springboard from './Components/Springboard';
 import Landing from './Components/Description';
 import Navbar from './Components/Navbar';
@@ -21,6 +20,7 @@ import Prices from './Components/Prices';
 import Qualifications from './Components/Qualifications';
 import Hero from './Components/Hero';
 import RealHero from './Components/RealHero';
+import BookingForm from './Components/BookingForm';
 
 //!/!/!/!/ ELOUISE RUN THIS FUNCTION TO LOGOUT A USER. MAKE SURE YOU IMPORT STORE AND LOGOUTADMIN THOUGH
 // store.dispatch(logoutAdmin())
@@ -57,6 +57,7 @@ const App = () => (
         <Route exact path="/aboutme" component={Aboutme} />
         <Route exact path="/qualifications" component={Qualifications} />
         <Route exact path="/pricing" component={Prices} />
+        <Route exact path="/bookingform" component={BookingForm} />
 
         <Footer />
       </div>
