@@ -25,6 +25,7 @@ import Qualifications from './Components/Qualifications';
 import Hero from './Components/Hero';
 import RealHero from './Components/RealHero';
 import BookingForm from './Components/BookingForm';
+import Contact from './Components/Contact';
 import Dashboard from './Components/Dashboard';
 
 import { Container, Row, Col } from 'reactstrap';
@@ -97,12 +98,15 @@ const App = () => (
           className="notHome"
           component={Navbar}
         />
+        <Route exact path="/contact" className="notHome" component={Navbar} />
         <Route exact path="/timetable" className="notHome" component={Footer} />
         <Route exact path="/yoga" className="notHome" component={Footer} />
         <Route exact path="/massage" className="notHome" component={Footer} />
         <Route exact path="/aboutme" className="notHome" component={Footer} />
         <Route exact path="/bookingform" component={BookingForm} />
+        <Route exact path="/contact" component={Contact} />
         <Route exact path="/bookingform" component={Footer} />
+        <Route exact path="/contact" component={Footer} />
 
         {/* Admin Routes */}
       </div>
