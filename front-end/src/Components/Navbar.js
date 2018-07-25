@@ -50,17 +50,17 @@ class Navman extends React.Component {
             <Nav className="ml-auto" navbar>
               <NavItem>
                 <NavLink className="navtext" href="/pricing">
-                  Pricing
+                  Prices
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className="navtext" href="/bookingform">
+                  Book Now
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="navtext" href="/aboutme">
                   About Me
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="navtext" href="/bookingform">
-                  Private Booking
                 </NavLink>
               </NavItem>
 
@@ -77,7 +77,9 @@ class Navman extends React.Component {
                   >
                     Oil Products
                   </DropdownItem>
-                  <DropdownItem href="/timetable">Public Class</DropdownItem>
+                  <DropdownItem href="/timetable">
+                    Public Class Info
+                  </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>Close</DropdownItem>
                 </DropdownMenu>

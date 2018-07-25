@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './footer.css';
 import facebook from '../Assets/social/facebook.png';
 import instagram from '../Assets/social/instagram.png';
-import gmail from '../Assets/social/gmail.png';
+import contact from '../Assets/social/contact.png';
 
 export default () => {
   return (
@@ -15,8 +15,8 @@ export default () => {
         <a href="https://www.instagram.com/savasanaonsundays/" target="_blank">
           <img className="socialimg" src={instagram} />
         </a>
-        <Link to="../">
-          <img className="socialimg" src={gmail} />
+        <Link to="../bookingform">
+          <img className="socialimg" src={contact} />
         </Link>
       </footer>
     </div>
