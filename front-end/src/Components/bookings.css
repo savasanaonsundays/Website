@@ -1,0 +1,41 @@
+.bookingItem {
+  list-style: none;
+  border: 1px black solid;
+
+  border-radius: 5px;
+  background-color: whitesmoke;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+ul {
+  margin: 0; /* To remove default bottom margin */
+  padding: 0; /* To remove default left padding */
+}
+
+.bookingButton {
+  float: right;
+  width: 49%;
+  height: 100%;
+  margin-right: 1px;
+  margin-left: 1px;
+}
+
+.info {
+  margin-left: 10px;
+  word-wrap: break-word;
+}
+
+.buttonWrapper {
+  display: flex;
+}
+
+.cancelButton {
+  float: right;
+  width: 49%;
+  height: 100%;
+  margin-right: 2px;
+}
+
+.cancelWrapper {
+}

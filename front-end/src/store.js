@@ -13,7 +13,7 @@ const store = createStore(
   compose(
     //COMPOSE IS
     applyMiddleware(...middleware),
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
+    compose
   )
 );
 
