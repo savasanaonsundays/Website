@@ -68,22 +68,27 @@ class Navman extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="navtext" href="/aboutme">
-                  About Me
+                <NavLink
+                  className="navtext"
+                  href="https://medium.com/@savasanaonsundaysyoga"
+                  target="_blank"
+                >
+                  Blog
                 </NavLink>
               </NavItem>
 
               <NavItem>
                 <NavLink
                   className="navtext"
-                  href="https://medium.com/@savasanaonsundaysyoga"
+                  href="https://www.mydoterra.com/savasanaonsundays/#/"
+                  target="_blank"
                 >
                   Oil Store
                 </NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="navtext" href="/aboutme">
-                  About Us
+                  About Me
                 </NavLink>
               </NavItem>
             </Nav>
