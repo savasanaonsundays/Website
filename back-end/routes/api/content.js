@@ -57,6 +57,14 @@ router.get("/massage", (req, res) => {
   });
 });
 
+router.get("/yoga", (req, res) => {
+  mongoose.connect(db);
+  const yoga = mongoose.model("content");
+  yoga.findOne({ name: "yoga" }).then(yoga => {
+    res.send(yoga);
+  });
+});
+
 // POST REQUESTS
 
 // router.post('/aboutMe/post',(req,res) => {

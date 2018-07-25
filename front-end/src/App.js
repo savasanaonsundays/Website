@@ -17,6 +17,7 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Aboutme from './Components/Aboutme';
 import Timetable from './Components/Timetable';
+import Yoga from './Components/Yoga';
 import Massage from './Components/Massage';
 
 import Prices from './Components/Prices';
@@ -52,6 +53,7 @@ const App = () => (
         <Route exact path="/" component={Springboard} />
         <Route exact path="/aboutme" className="notHome" component={Navbar} />
         <Route exact path="/timetable" className="notHome" component={Navbar} />
+        <Route exact path="/yoga" className="notHome" component={Navbar} />
         <Route exact path="/massage" className="notHome" component={Navbar} />
         <Route
           exact
@@ -84,6 +86,7 @@ const App = () => (
           </Switch>
         }
         <Route exact path="/massage" component={Massage} />
+        <Route exact path="/yoga" component={Yoga} />
         <Route exact path="/timetable" component={Timetable} />
         <Route exact path="/aboutme" component={Aboutme} />
         <Route exact path="/qualifications" component={Qualifications} />
