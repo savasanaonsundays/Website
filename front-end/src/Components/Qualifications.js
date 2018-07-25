@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './aboutme.css';
+import './qualifications.css';
 
 export default class Qualifications extends Component {
   constructor(props) {
