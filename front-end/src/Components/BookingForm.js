@@ -43,16 +43,19 @@ class BookingForm extends React.Component {
     axios
       .post('api/bookings/privatebooking', data)
       .then(resp => {
-        alert('Form has been submitted ' + this.state.value);
+        alert(
+          'FORM HAS BEEN SUCCESSFULLY SUBMITTED! A response or booking confirmation will be sent via email once approved' +
+            this.state.value
+        );
         window.location.href = '/';
       })
       .catch(err => {
-        alert('fill in required fields');
+        alert('FIELDS MISSING!: please fill in a required fields with (*) ');
       });
   }
   render() {
     return (
-      <Container className="whiteBoy">
+      <Container className="whiteBody">
         <Form onSubmit={this.handleSubmit}>
           <FormGroup>
             <Row>
@@ -64,7 +67,7 @@ class BookingForm extends React.Component {
             </Row>
             <Input plaintext>
               <b>
-                please fill out details below, all fields with (*) are required
+                Please fill out details below, all fields with (*) are required
               </b>
             </Input>
           </FormGroup>
