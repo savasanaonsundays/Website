@@ -54,13 +54,23 @@ const App = () => (
           className="notHome"
           component={Navbar}
         />
+        <Route exact path="/" component={Footer} />
         <Route exact path="/pricing" className="notHome" component={Navbar} />
+        <Route exact path="/pricing" component={Prices} />
+        <Route exact path="/pricing" className="notHome" component={Footer} />
         <Route exact path="/register" component={Register} />
+
         <Route exact path="/login" component={Login} />
         <Route exact path="/aboutme" component={Aboutme} />
         <Route exact path="/qualifications" component={Qualifications} />
-        <Route exact path="/pricing" component={Prices} />
+        <Route
+          exact
+          path="/bookingform"
+          className="notHome"
+          component={Navbar}
+        />
         <Route exact path="/bookingform" component={BookingForm} />
+        <Route exact path="/bookingform" component={Footer} />
 
         {/* Admin Routes */}
 

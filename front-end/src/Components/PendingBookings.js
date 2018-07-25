@@ -29,14 +29,45 @@ export default class PendingBooking extends Component {
                 <li key={item._id} className="bookingItem">
                   <Row>
                     <Col sm="9" xs="6">
-                      <div className="info"> Name:{item.name}</div>
-                      <div className="info"> Date:{item.date} </div>
-                      <div className="info"> Hours:{item.hours} </div>
-                      <div className="info"> Session:{item.session} </div>
-                      <div className="info"> Email:{item.email} </div>
-                      <div className="info"> Telephone:{item.tel} </div>
-                      <div className="info"> Health:{item.health} </div>
-                      <div className="info"> Comment:{item.comment} </div>
+                      <div className="info">
+                        {' '}
+                        <span className="itemName">Name:</span>
+                        {item.name}
+                      </div>
+                      <div className="info">
+                        {' '}
+                        <span className="itemName"> Date:</span> {item.date}
+                      </div>
+                      <div className="info">
+                        {' '}
+                        <span className="itemName">Hours:</span>
+                        {item.hours}{' '}
+                      </div>
+                      <div className="info">
+                        {' '}
+                        <span className="itemName">Session:</span>
+                        {item.session}{' '}
+                      </div>
+                      <div className="info">
+                        {' '}
+                        <span className="itemName">Email:</span>
+                        {item.email}{' '}
+                      </div>
+                      <div className="info">
+                        {' '}
+                        <span className="itemName">Telephone:</span>
+                        {item.tel}{' '}
+                      </div>
+                      <div className="info">
+                        {' '}
+                        <span className="itemName">Health:</span>
+                        {item.health}{' '}
+                      </div>
+                      <div className="info">
+                        {' '}
+                        <span className="itemName">Comment:</span>
+                        {item.comment}{' '}
+                      </div>
                     </Col>
 
                     <Col sm="3" xs="6" className="buttonWrapper">
@@ -48,7 +79,13 @@ export default class PendingBooking extends Component {
                         onClick={() => {
                           fetch('api/bookings/update/' + item._id, {
                             method: 'put'
-                          }).then(res => console.log(res));
+                          }).then(
+                            fetch('/api/bookings/unconfirmed')
+                              .then(res => res.json())
+                              .then(bookings =>
+                                this.setState({ response: bookings })
+                              )
+                          );
                         }}
                       >
                         ✓

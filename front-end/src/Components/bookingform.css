@@ -1,0 +1,19 @@
+.clearButton {
+  float: right;
+  margin-bottom: 8px;
+}
+
+.whiteBoy {
+  background-color: white;
+}
+
+.formTitle {
+  font-size: 50px;
+}
+
+.formTitleContainer {
+  text-align: center;
+}
+body {
+  background-color: whitesmoke !important;
+}

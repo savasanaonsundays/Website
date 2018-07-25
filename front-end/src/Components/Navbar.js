@@ -63,20 +63,6 @@ class Navman extends React.Component {
                   Private Booking
                 </NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink className="navtext" href="/register">
-                  register
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  className="navtext"
-                  href=""
-                  onClick={this.onLogoutClick.bind(this)}
-                >
-                  logout
-                </NavLink>
-              </NavItem>
 
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

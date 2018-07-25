@@ -11,6 +11,7 @@ import {
   Input,
   FormText
 } from 'reactstrap';
+import './bookingform.css';
 
 class BookingForm extends React.Component {
   constructor(props) {
@@ -51,13 +52,13 @@ class BookingForm extends React.Component {
   }
   render() {
     return (
-      <Container>
+      <Container className="whiteBoy">
         <Form onSubmit={this.handleSubmit}>
           <FormGroup>
             <Row>
-              <Col sm="12" md={{ size: 8, offset: 4 }}>
+              <Col className="formTitleContainer">
                 <Label for="BookingFormEmail">
-                  <h1>Private Booking Form</h1>
+                  <h1 class="formTitle">Private Booking Form</h1>
                 </Label>
               </Col>
             </Row>
@@ -161,8 +162,13 @@ class BookingForm extends React.Component {
           </Button>
 
           <Row>
-            <Col sm="12" md={{ size: 8, offset: 11 }}>
-              <Button color="danger" size="sm" href="/bookingform">
+            <Col sm="12">
+              <Button
+                color="danger"
+                size="sm"
+                href="/bookingform"
+                className="clearButton"
+              >
                 Clear
               </Button>
             </Col>
