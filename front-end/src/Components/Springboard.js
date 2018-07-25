@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './springboard.css';
 import { Container, Row, Col } from 'reactstrap';
 import Item from './Card';
+import { Link } from 'react-router-dom';
 
 class Springboard extends Component {
   constructor(props) {
@@ -15,42 +16,63 @@ class Springboard extends Component {
         <Container>
           <Row>
             <div className="col-md-4">
-              <Item
-                title="Private Lessons"
-                image={require('../Assets/springboard/yoga.png')}
-              />
+              <Link to="/pricing" style={{ textDecoration: 'none' }}>
+                <Item
+                  title="Private Lessons"
+                  image={require('../Assets/springboard/yoga.png')}
+                />
+              </Link>
+            </div>
+
+            <div className="col-md-4">
+              <a
+                href="https://www.mydoterra.com/savasanaonsundays/#/"
+                style={{ textDecoration: 'none' }}
+                target="_blank"
+              >
+                <Item
+                  title="Oil Store"
+                  image={require('../Assets/springboard/oil.png')}
+                />
+              </a>{' '}
             </div>
             <div className="col-md-4">
-              <Item
-                title="Oil Store"
-                image={require('../Assets/springboard/oil.png')}
-              />
-            </div>
-            <div className="col-md-4">
-              <Item
-                title="Blog"
-                image={require('../Assets/springboard/blog.jpeg')}
-              />
+              <a
+                href="https://medium.com/@savasanaonsundaysyoga"
+                style={{ textDecoration: 'none' }}
+                target="_blank"
+              >
+                <Item
+                  title="Blog"
+                  image={require('../Assets/springboard/blog.jpeg')}
+                />
+              </a>
             </div>
           </Row>
           <Row>
             <div className="col-md-4">
-              <Item
-                title="Class Timetable"
-                image={require('../Assets/springboard/timetable.jpeg')}
-              />
+              <Link to="/pricing" style={{ textDecoration: 'none' }}>
+                <Item
+                  title="Class Timetable"
+                  image={require('../Assets/springboard/timetable.jpeg')}
+                />
+              </Link>
             </div>
             <div className="col-md-4">
-              <Item
-                title="Massage"
-                image={require('../Assets/springboard/back.png')}
-              />
+              <Link to="/pricing" style={{ textDecoration: 'none' }}>
+                <Item
+                  title="Massage"
+                  image={require('../Assets/springboard/back.png')}
+                />
+              </Link>
             </div>
             <div className="col-md-4">
-              <Item
-                title="About Us"
-                image={require('../Assets/springboard/image.png')}
-              />
+              <Link to="/aboutme" style={{ textDecoration: 'none' }}>
+                <Item
+                  title="About Us"
+                  image={require('../Assets/springboard/image.png')}
+                />
+              </Link>
             </div>
           </Row>
         </Container>

@@ -11,6 +11,6 @@ i {
 .custombar {
   justify-content: center;
   position: bottom;
-  bottom: 0;
+  bottom: 0.5vh;
   width: 100%;
 }
