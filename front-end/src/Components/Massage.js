@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './timetable.css';
+import './massage.css';
 
-export default class Timetable extends Component {
+export default class Massage extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -11,9 +11,9 @@ export default class Timetable extends Component {
 
   componentDidMount() {
     //we callApi
-    fetch('/api/content/Timetable')
+    fetch('/api/content/Massage')
       .then(res => res.json())
-      .then(timetable => this.setState({ response: timetable.text }));
+      .then(massage => this.setState({ response: massage.text }));
   }
 
   render() {

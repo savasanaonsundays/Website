@@ -41,6 +41,22 @@ router.get("/contents", (req, res) => {
   });
 });
 
+router.get("/timetable", (req, res) => {
+  mongoose.connect(db);
+  const timetable = mongoose.model("content");
+  timetable.findOne({ name: "timetable" }).then(timetable => {
+    res.send(timetable);
+  });
+});
+
+router.get("/massage", (req, res) => {
+  mongoose.connect(db);
+  const massage = mongoose.model("content");
+  massage.findOne({ name: "massage" }).then(massage => {
+    res.send(massage);
+  });
+});
+
 // POST REQUESTS
 
 // router.post('/aboutMe/post',(req,res) => {

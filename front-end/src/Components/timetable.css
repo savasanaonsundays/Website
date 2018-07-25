@@ -1,0 +1,10 @@
+.background {
+  background-color: whitesmoke;
+  padding: 50px;
+  display: flex;
+  height: 80vh;
+}
+
+.child {
+  padding: 20px;
+}
