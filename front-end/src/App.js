@@ -96,6 +96,10 @@ const App = () => (
           className="notHome"
           component={Navbar}
         />
+        <Route exact path="/timetable" className="notHome" component={Footer} />
+        <Route exact path="/yoga" className="notHome" component={Footer} />
+        <Route exact path="/massage" className="notHome" component={Footer} />
+        <Route exact path="/aboutme" className="notHome" component={Footer} />
         <Route exact path="/bookingform" component={BookingForm} />
         <Route exact path="/bookingform" component={Footer} />
 

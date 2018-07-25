@@ -16,9 +16,9 @@ class Springboard extends Component {
         <Container>
           <Row>
             <div className="col-md-4">
-              <Link to="/pricing" style={{ textDecoration: 'none' }}>
+              <Link to="/bookingform" style={{ textDecoration: 'none' }}>
                 <Item
-                  title="Private Lessons"
+                  title="Book Now"
                   image={require('../Assets/springboard/yoga.png')}
                 />
               </Link>
@@ -31,10 +31,36 @@ class Springboard extends Component {
                 target="_blank"
               >
                 <Item
-                  title="Oil Store"
+                  title="Essential Oils"
                   image={require('../Assets/springboard/oil.png')}
                 />
               </a>{' '}
+            </div>
+            <div className="col-md-4">
+              <Link to="/aboutme" style={{ textDecoration: 'none' }}>
+                <Item
+                  title="About Us"
+                  image={require('../Assets/springboard/image.png')}
+                />
+              </Link>
+            </div>
+          </Row>
+          <Row>
+            <div className="col-md-4">
+              <Link to="/yoga" style={{ textDecoration: 'none' }}>
+                <Item
+                  title="Private Yoga Session"
+                  image={require('../Assets/springboard/timetable.jpeg')}
+                />
+              </Link>
+            </div>
+            <div className="col-md-4">
+              <Link to="/massage" style={{ textDecoration: 'none' }}>
+                <Item
+                  title="Massage"
+                  image={require('../Assets/springboard/back.png')}
+                />
+              </Link>
             </div>
             <div className="col-md-4">
               <a
@@ -47,32 +73,6 @@ class Springboard extends Component {
                   image={require('../Assets/springboard/blog.jpeg')}
                 />
               </a>
-            </div>
-          </Row>
-          <Row>
-            <div className="col-md-4">
-              <Link to="/pricing" style={{ textDecoration: 'none' }}>
-                <Item
-                  title="Class Timetable"
-                  image={require('../Assets/springboard/timetable.jpeg')}
-                />
-              </Link>
-            </div>
-            <div className="col-md-4">
-              <Link to="/pricing" style={{ textDecoration: 'none' }}>
-                <Item
-                  title="Massage"
-                  image={require('../Assets/springboard/back.png')}
-                />
-              </Link>
-            </div>
-            <div className="col-md-4">
-              <Link to="/aboutme" style={{ textDecoration: 'none' }}>
-                <Item
-                  title="About Us"
-                  image={require('../Assets/springboard/image.png')}
-                />
-              </Link>
             </div>
           </Row>
         </Container>
