@@ -69,7 +69,7 @@ class Navman extends React.Component {
                   Menu
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>Private Yoga</DropdownItem>
+                  <DropdownItem href="/yoga">Private Yoga</DropdownItem>
                   <DropdownItem href="/massage">Massage Session</DropdownItem>
                   <DropdownItem
                     href="https://www.mydoterra.com/savasanaonsundays/#/"
