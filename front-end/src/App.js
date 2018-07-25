@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './App.css';
 import PendingBookings from './Components/PendingBookings';
@@ -11,6 +11,7 @@ import setAuthToken from './utils/setAuthToken';
 import { setCurrentAdmin, logoutAdmin } from './actions/authActions';
 import { Provider } from 'react-redux';
 import store from './store';
+import PrivateRoute from './Components/common/PrivateRoute';
 import Springboard from './Components/Springboard';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
@@ -24,6 +25,7 @@ import BookingForm from './Components/BookingForm';
 import Dashboard from './Components/Dashboard';
 
 import { Container, Row, Col } from 'reactstrap';
+
 //!/!/!/!/ ELOUISE RUN THIS FUNCTION TO LOGOUT A USER. MAKE SURE YOU IMPORT STORE AND LOGOUTADMIN THOUGH
 // store.dispatch(logoutAdmin())
 
@@ -60,6 +62,23 @@ const App = () => (
         <Route exact path="/register" component={Register} />
 
         <Route exact path="/login" component={Login} />
+        <PrivateRoute path="/dashboard" component={Dashboard} />
+        {
+          <Switch>
+            <Container fluid className="test">
+              <PrivateRoute
+                exact
+                path="/dashboard/pending"
+                component={PendingBookings}
+              />
+              <PrivateRoute
+                exact
+                path="/dashboard/confirmed"
+                component={ConfirmedBookings}
+              />
+            </Container>
+          </Switch>
+        }
         <Route exact path="/aboutme" component={Aboutme} />
         <Route exact path="/qualifications" component={Qualifications} />
         <Route
@@ -72,16 +91,6 @@ const App = () => (
         <Route exact path="/bookingform" component={Footer} />
 
         {/* Admin Routes */}
-
-        <Route path="/dashboard" component={Dashboard} />
-        <Container fluid className="test">
-          <Route exact path="/dashboard" component={PendingBookings} />
-          <Route
-            exact
-            path="/dashboard/confirmed"
-            component={ConfirmedBookings}
-          />
-        </Container>
       </div>
     </Router>
   </Provider>
