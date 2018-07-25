@@ -41,6 +41,14 @@ router.get("/contents", (req, res) => {
   });
 });
 
+router.get("/timetable", (req, res) => {
+  mongoose.connect(db);
+  const timetable = mongoose.model("content");
+  timetable.findOne({ name: "timetable" }).then(timetable => {
+    res.send(timetable);
+  });
+});
+
 // POST REQUESTS
 
 // router.post('/aboutMe/post',(req,res) => {

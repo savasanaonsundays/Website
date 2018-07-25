@@ -16,6 +16,7 @@ import Springboard from './Components/Springboard';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Aboutme from './Components/Aboutme';
+import Timetable from './Components/Timetable';
 
 import Prices from './Components/Prices';
 import Qualifications from './Components/Qualifications';
@@ -49,6 +50,7 @@ const App = () => (
         <Route exact path="/" component={RealHero} />
         <Route exact path="/" component={Springboard} />
         <Route exact path="/aboutme" className="notHome" component={Navbar} />
+        <Route exact path="/timetable" className="notHome" component={Navbar} />
         <Route
           exact
           path="/qualifications"
@@ -79,6 +81,7 @@ const App = () => (
             </Container>
           </Switch>
         }
+        <Route exact path="/timetable" component={Timetable} />
         <Route exact path="/aboutme" component={Aboutme} />
         <Route exact path="/qualifications" component={Qualifications} />
         <Route

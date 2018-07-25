@@ -54,7 +54,7 @@ class Navman extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="navtext" href="/components/">
+                <NavLink className="navtext" href="/timetable">
                   Class Timetable
                 </NavLink>
               </NavItem>
