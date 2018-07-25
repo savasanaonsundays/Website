@@ -1,10 +1,29 @@
 .background {
   background-color: whitesmoke;
-  padding: 50px;
+  text-align: center;
   display: flex;
-  height: 80vh;
+  height: 70vh;
 }
 
 .child {
-  padding: 20px;
+}
+
+.bob {
+  margin: 5vh !important;
+  margin-top: 0;
+  height: 60vh;
+  overflow: scroll;
+}
+
+@media (max-width: 560px) {
+  .background {
+    padding: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .bob {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+    height: 80vh;
+  }
 }

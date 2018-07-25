@@ -3,14 +3,16 @@ i {
 }
 
 .socialimg {
-  height: 30px;
-  width: 30px;
+  height: 35px;
+  width: 35px;
   margin: 10px;
 }
 
 .custombar {
   justify-content: center;
-  position: bottom;
-  bottom: 0.5vh;
+
   width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
 }

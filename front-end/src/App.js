@@ -16,6 +16,9 @@ import Springboard from './Components/Springboard';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Aboutme from './Components/Aboutme';
+import Timetable from './Components/Timetable';
+import Yoga from './Components/Yoga';
+import Massage from './Components/Massage';
 
 import Prices from './Components/Prices';
 import Qualifications from './Components/Qualifications';
@@ -48,14 +51,18 @@ const App = () => (
         {/* Public Routes */}
         <Route exact path="/" component={RealHero} />
         <Route exact path="/" component={Springboard} />
+        <Route exact path="/" component={Footer} />
         <Route exact path="/aboutme" className="notHome" component={Navbar} />
+        <Route exact path="/timetable" className="notHome" component={Navbar} />
+        <Route exact path="/yoga" className="notHome" component={Navbar} />
+        <Route exact path="/massage" className="notHome" component={Navbar} />
         <Route
           exact
           path="/qualifications"
           className="notHome"
           component={Navbar}
         />
-        <Route exact path="/" component={Footer} />
+
         <Route exact path="/pricing" className="notHome" component={Navbar} />
         <Route exact path="/pricing" component={Prices} />
         <Route exact path="/pricing" className="notHome" component={Footer} />
@@ -79,6 +86,9 @@ const App = () => (
             </Container>
           </Switch>
         }
+        <Route exact path="/massage" component={Massage} />
+        <Route exact path="/yoga" component={Yoga} />
+        <Route exact path="/timetable" component={Timetable} />
         <Route exact path="/aboutme" component={Aboutme} />
         <Route exact path="/qualifications" component={Qualifications} />
         <Route
@@ -87,6 +97,10 @@ const App = () => (
           className="notHome"
           component={Navbar}
         />
+        <Route exact path="/timetable" className="notHome" component={Footer} />
+        <Route exact path="/yoga" className="notHome" component={Footer} />
+        <Route exact path="/massage" className="notHome" component={Footer} />
+        <Route exact path="/aboutme" className="notHome" component={Footer} />
         <Route exact path="/bookingform" component={BookingForm} />
         <Route exact path="/bookingform" component={Footer} />
 
