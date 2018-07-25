@@ -15,7 +15,7 @@ export default () => {
         <a href="https://www.instagram.com/savasanaonsundays/" target="_blank">
           <img className="socialimg" src={instagram} />
         </a>
-        <Link to="../bookingform">
+        <Link to="/contact">
           <img className="socialimg" src={contact} />
         </Link>
       </footer>
