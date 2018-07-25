@@ -10,4 +10,7 @@ i {
 
 .custombar {
   justify-content: center;
+  position: bottom;
+  bottom: 0;
+  width: 100%;
 }

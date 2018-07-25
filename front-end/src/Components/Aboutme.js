@@ -22,7 +22,6 @@ export default class Aboutme extends Component {
         <div className="child">
           <p>{this.state.response}</p>
         </div>
-        <div className="child">{this.state.response}</div>
       </div>
     );
   }

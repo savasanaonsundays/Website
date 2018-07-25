@@ -2,3 +2,8 @@ body {
   background: #f6f6f6;
   font-family: 'Open Sans', sans-serif;
 }
+
+.test {
+  padding: 0 !important;
+  margin: 0 !important;
+}

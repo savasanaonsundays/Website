@@ -1,8 +1,8 @@
 .background {
-  background-color: lightgrey;
+  background-color: whitesmoke;
   padding: 50px;
   display: flex;
-  height: 100vh;
+  height: 80vh;
 }
 
 .child {

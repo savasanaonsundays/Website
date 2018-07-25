@@ -59,22 +59,8 @@ class Navman extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="navtext" href="/">
+                <NavLink className="navtext" href="/bookingform">
                   Private Booking
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink className="navtext" href="/register">
-                  register
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  className="navtext"
-                  href=""
-                  onClick={this.onLogoutClick.bind(this)}
-                >
-                  logout
                 </NavLink>
               </NavItem>
 
@@ -86,8 +72,10 @@ class Navman extends React.Component {
                   <DropdownItem>Private Lessons</DropdownItem>
                   <DropdownItem>Class Timetable</DropdownItem>
                   <DropdownItem>Massage</DropdownItem>
-                  <DropdownItem>Oilstore</DropdownItem>
-                  <DropdownItem>About Us</DropdownItem>
+                  <DropdownItem href="https://www.mydoterra.com/savasanaonsundays/#/">
+                    Oilstore
+                  </DropdownItem>
+                  <DropdownItem href="/aboutme">About Us</DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>Close</DropdownItem>
                 </DropdownMenu>
