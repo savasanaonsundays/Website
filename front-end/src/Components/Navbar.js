@@ -54,8 +54,8 @@ class Navman extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="navtext" href="/timetable">
-                  Class Timetable
+                <NavLink className="navtext" href="/aboutme">
+                  About Me
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -69,13 +69,15 @@ class Navman extends React.Component {
                   Menu
                 </DropdownToggle>
                 <DropdownMenu right>
-                  <DropdownItem>Private Lessons</DropdownItem>
-                  <DropdownItem>Class Timetable</DropdownItem>
-                  <DropdownItem>Massage</DropdownItem>
-                  <DropdownItem href="https://www.mydoterra.com/savasanaonsundays/#/">
-                    Oilstore
+                  <DropdownItem>Private Yoga</DropdownItem>
+                  <DropdownItem href="/massage">Massage Session</DropdownItem>
+                  <DropdownItem
+                    href="https://www.mydoterra.com/savasanaonsundays/#/"
+                    target="_blank"
+                  >
+                    Oil Products
                   </DropdownItem>
-                  <DropdownItem href="/aboutme">About Us</DropdownItem>
+                  <DropdownItem href="/timetable">Public Class</DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>Close</DropdownItem>
                 </DropdownMenu>
