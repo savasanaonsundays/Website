@@ -19,7 +19,6 @@ const booking = new Schema({
   email: {
     type: String,
     minlength: 5,
-    maxlength: 32,
     required: true
   },
   tel: {

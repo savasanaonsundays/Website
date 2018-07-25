@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './aboutme.css';
+import './prices.css';
 
 export default class Prices extends Component {
   constructor(props) {
