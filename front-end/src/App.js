@@ -68,7 +68,7 @@ const App = () => (
             <Container fluid className="test">
               <PrivateRoute
                 exact
-                path="/dashboard/pending"
+                path="/dashboard"
                 component={PendingBookings}
               />
               <PrivateRoute

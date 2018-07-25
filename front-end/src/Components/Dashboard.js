@@ -22,7 +22,7 @@ class Dashboard extends React.Component {
       <div className="dashNav1">
         <Nav vertical className="dashNav">
           <NavItem className="navLink">
-            <NavLink href="/dashboard/pending">Pending</NavLink>
+            <NavLink href="/dashboard">Pending</NavLink>
           </NavItem>
           <NavItem className="navLink">
             <NavLink href="/dashboard/confirmed">Confirmed</NavLink>
