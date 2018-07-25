@@ -10,6 +10,7 @@ const bodyParser = require('body-parser'); //2.TO BE ABLE TO USE REQ.BODY
 const cors = require('cors')
 app.use(cors({ origin: process.env.CORS_ORIGINS }))
 app.use(express.static(path.resolve(__dirname, '../front-end/build')));
+
 const passport = require('passport'); //
 
 const adminRoute = require('./routes/api/admins');
@@ -62,5 +63,7 @@ require('./config/passport')(passport);//PASSING IN PASSPORT
 
 const port = process.env.PORT ||7000;
 
-
+app.get('*', (req,res) =>{
+  res.sendfile(path.resolve(__dirname, '../front-end/build/index.html'))
+})
 app.listen(port, () => console.log(`server is running on  port ${port}`));
