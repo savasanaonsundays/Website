@@ -13,7 +13,6 @@ import { Provider } from 'react-redux';
 import store from './store';
 import PrivateRoute from './Components/common/PrivateRoute';
 import Springboard from './Components/Springboard';
-import Landing from './Components/Description';
 import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import Aboutme from './Components/Aboutme';
