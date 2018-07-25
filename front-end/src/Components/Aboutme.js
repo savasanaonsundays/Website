@@ -1,4 +1,15 @@
 import React, { Component } from 'react';
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormText
+} from 'reactstrap';
 import './aboutme.css';
 
 export default class Aboutme extends Component {
@@ -30,6 +41,9 @@ export default class Aboutme extends Component {
         <div className="child">
           <p className="bob">{this.state.response}</p>
           <p className="bob">{this.state.qual}</p>
+          <Button color="info" size="lg" href="/contact">
+            Contact Us
+          </Button>
         </div>
       </div>
     );
