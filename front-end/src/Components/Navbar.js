@@ -1,5 +1,6 @@
 import React from 'react';
-
+import './footer.css';
+import logo from '../Assets/navbar/logo.png';
 import {
   Collapse,
   Navbar,
@@ -43,8 +44,16 @@ class Navman extends React.Component {
   render() {
     return (
       <div>
-        <Navbar className="navbar sticky-top" light expand="md" id="navynavy">
-          <NavbarBrand href="/">Savasana on Sundays</NavbarBrand>
+        <Navbar
+          className="navbar sticky-top"
+          light
+          bsStyle
+          expand="sm"
+          id="navynavy"
+        >
+          <NavbarBrand href="/">
+            <img src={logo} className="logo" />
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
@@ -63,23 +72,19 @@ class Navman extends React.Component {
                   Private Booking
                 </NavLink>
               </NavItem>
-
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Menu
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>Private Lessons</DropdownItem>
-                  <DropdownItem>Class Timetable</DropdownItem>
-                  <DropdownItem>Massage</DropdownItem>
-                  <DropdownItem href="https://www.mydoterra.com/savasanaonsundays/#/">
-                    Oilstore
-                  </DropdownItem>
-                  <DropdownItem href="/aboutme">About Us</DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>Close</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <NavItem>
+                <NavLink
+                  className="navtext"
+                  href="https://medium.com/@savasanaonsundaysyoga"
+                >
+                  Oil Store
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className="navtext" href="/aboutme">
+                  About Us
+                </NavLink>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
