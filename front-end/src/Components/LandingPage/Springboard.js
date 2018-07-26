@@ -31,7 +31,7 @@ class Springboard extends Component {
                 target="_blank"
               >
                 <Item
-                  title="Essential Oils"
+                  title="Oil Shop"
                   image={require('../../Assets/springboard/oil.png')}
                 />
               </a>{' '}
