@@ -83,7 +83,12 @@ class Navman extends React.Component {
                   href="https://www.mydoterra.com/savasanaonsundays/#/"
                   target="_blank"
                 >
-                  Oil Store
+                  Oil Shop
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className="navtext" href="/contact">
+                  Contact Us
                 </NavLink>
               </NavItem>
               <NavItem>
