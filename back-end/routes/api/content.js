@@ -19,6 +19,9 @@ router.get("/aboutMe", (req, res) => {
 
 router.get("/prices", (req, res) => {
   mongoose.connect(db);
+  (function() {
+    console.log(res);
+  }());
   const prices = mongoose.model("content");
   prices.findOne({ name: "prices" }).then(prices => {
     res.send(prices);
@@ -87,7 +90,9 @@ router.get("/yoga", (req, res) => {
 router.put("/:id", (req, res) => {
   mongoose.connect(db);
   const contents = mongoose.model("content");
-  console.log(req.params.id);
+  (function() {
+    console.log(req.params.id);
+});
   contents.findByIdAndUpdate(req.params.id, req.body).then(res.json(contents));
 });
 

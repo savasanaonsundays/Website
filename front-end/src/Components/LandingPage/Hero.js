@@ -1,5 +1,5 @@
 import React from 'react';
-import hero from '../Assets/social/hero.jpg';
+import hero from '../../Assets/social/hero.jpg';
 import './hero.css';
 
 export default props => {

@@ -56,7 +56,9 @@ router.get('/confirmed',(req,res) => {
 router.delete('/delete/:id',(req,res) => {
     mongoose.connect(db)
     const bookings = mongoose.model('booking')
-    console.log(req.params.id)
+    (function() {
+        console.log(req.params.id);
+    }());
     bookings.findByIdAndRemove({_id:req.params.id}).then(
         res.json(bookings)
     )
@@ -66,7 +68,9 @@ router.delete('/delete/:id',(req,res) => {
 router.put('/update/:id',(req,res) => {
     mongoose.connect(db)
     const bookings = mongoose.model('booking')
-    console.log(req.params.id)
+    (function() {
+        console.log(req.params.id);
+    }());
     bookings.findByIdAndUpdate(req.params.id,{isConfirmed:true}).then( updated_booking =>{
         console.log(updated_booking)
     }

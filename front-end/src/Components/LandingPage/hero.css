@@ -1,6 +1,6 @@
 .herobox {
   height: 100vh;
-  background: url('../Assets/social/hero.jpg');
+  background: url('../../Assets/social/hero.jpg');
   background-size: cover;
   background-position-y: 30%;
   background-size: cover;

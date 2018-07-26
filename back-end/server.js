@@ -17,7 +17,7 @@ const passport = require("passport"); //
 
 const adminRoute = require("./routes/api/admins");
 const testsRoute = require("./routes/api/tests");
-const test = require("./models/test");
+
 const content = require("./models/Content");
 const contentRoute = require("./routes/api/content");
 
@@ -29,17 +29,17 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Routes
+[
+app.use("/api/admins", adminRoute),
 
-app.use("/api/admins", adminRoute);
+app.use("/api/bookings", bookingsRoute),
 
-app.use("/api/bookings", bookingsRoute);
+app.use("/api/contacts", contactsRoute),
 
-app.use("/api/contacts", contactsRoute);
+app.use("/api/content", contentRoute),
 
-app.use("/api/content", contentRoute);
-
-app.use("/api/tests", testsRoute);
-
+app.use("/api/tests", testsRoute)
+]
 //connect to mongoDB
 mongoose
   .connect(db)
