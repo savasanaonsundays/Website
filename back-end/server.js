@@ -17,7 +17,7 @@ const passport = require("passport"); //
 
 const adminRoute = require("./routes/api/admins");
 const testsRoute = require("./routes/api/tests");
-const test = require("./models/test");
+
 const content = require("./models/Content");
 const contentRoute = require("./routes/api/content");
 
