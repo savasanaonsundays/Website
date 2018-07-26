@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './footer.css';
-import facebook from '../Assets/social/facebook.png';
-import instagram from '../Assets/social/instagram.png';
-import contact from '../Assets/social/gmail.png';
+import facebook from '../../Assets/social/facebook.png';
+import instagram from '../../Assets/social/instagram.png';
+import contact from '../../Assets/social/gmail.png';
 
 export default () => {
   return (

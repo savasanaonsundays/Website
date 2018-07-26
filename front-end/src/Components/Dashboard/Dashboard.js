@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Nav, NavItem, NavLink } from 'reactstrap';
-import { logoutAdmin } from '../actions/authActions';
+import { logoutAdmin } from '../../actions/authActions';
 import './dashboard.css';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import PendingBookings from './PendingBookings';

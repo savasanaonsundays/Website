@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import './App.css';
-import PendingBookings from './Components/PendingBookings';
-import ConfirmedBookings from './Components/ConfirmedBookings';
+import PendingBookings from './Components/Dashboard/PendingBookings';
+import ConfirmedBookings from './Components/Dashboard/ConfirmedBookings';
 import Register from './Components/auth/Register';
 import Login from './Components/auth/Login';
 import jwt_decode from 'jwt-decode';
@@ -12,21 +12,21 @@ import { setCurrentAdmin, logoutAdmin } from './actions/authActions';
 import { Provider } from 'react-redux';
 import store from './store';
 import PrivateRoute from './Components/common/PrivateRoute';
-import Springboard from './Components/Springboard';
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
-import Aboutme from './Components/Aboutme';
-import Timetable from './Components/Timetable';
-import Yoga from './Components/Yoga';
-import Massage from './Components/Massage';
+import Springboard from './Components/LandingPage/Springboard';
+import Navbar from './Components/Layouts/Navbar';
+import Footer from './Components/Layouts/Footer';
+import Aboutme from './Components/Pages/Aboutme';
+import Timetable from './Components/Pages/Timetable';
+import Yoga from './Components/Pages/Yoga';
+import Massage from './Components/Pages/Massage';
 
-import Prices from './Components/Prices';
-import Qualifications from './Components/Qualifications';
-import Hero from './Components/Hero';
-import RealHero from './Components/RealHero';
-import BookingForm from './Components/BookingForm';
-import Contact from './Components/Contact';
-import Dashboard from './Components/Dashboard';
+import Prices from './Components/Pages/Prices';
+import Qualifications from './Components/Pages/Qualifications';
+import Hero from './Components/LandingPage/Hero';
+import RealHero from './Components/LandingPage/RealHero';
+import BookingForm from './Components/Forms/BookingForm';
+import Contact from './Components/Forms/Contact';
+import Dashboard from './Components/Dashboard/Dashboard';
 
 import { Container, Row, Col } from 'reactstrap';
 

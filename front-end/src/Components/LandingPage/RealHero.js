@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Hero from './Hero';
-import Navbar from './Navbar';
+import Navbar from '../Layouts/Navbar';
 
 class RealHero extends Component {
   constructor(props) {
