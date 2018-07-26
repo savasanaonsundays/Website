@@ -18,9 +18,9 @@ export default class Prices extends Component {
 
   render() {
     return (
-      <div className="background">
+      <div className="pusher">
         <div className="child">
-          <p>{this.state.response}</p>
+          <p className="bob">{this.state.response}</p>
         </div>
       </div>
     );

@@ -20,7 +20,9 @@ export default class PendingBooking extends Component {
   }
 
   render() {
-    console.log(this.state.response);
+    (function() {
+      console.log(this.state.response);
+    });
     return (
       <div>
         <div className="bookingsContainer">

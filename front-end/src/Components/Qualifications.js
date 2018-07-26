@@ -13,7 +13,7 @@ export default class Qualifications extends Component {
     //we callApi
     fetch('/api/content/qualifications')
       .then(res => res.json())
-      .then(qualification => this.setState({ response: qualification.text }));
+      .then(qualifications => this.setState({ response: qualifications.text }));
   }
 
   render() {
@@ -22,7 +22,6 @@ export default class Qualifications extends Component {
         <div className="child">
           <p>{this.state.response}</p>
         </div>
-        <div className="child">{this.state.response}</div>
       </div>
     );
   }

@@ -1,9 +1,18 @@
 #navynavy {
   color: black;
   background-color: white;
-  opacity: 0.7;
-  height: 11vh;
+  opacity: 0.9;
+  text-align: center;
 }
-.navtext {
-  color: red;
+
+.logo {
+  width: 65px;
+  height: 65px;
+  margin-top: 8px;
+}
+
+* {
+  font-style: none !important;
+
+  text-decoration: none !important;
 }
