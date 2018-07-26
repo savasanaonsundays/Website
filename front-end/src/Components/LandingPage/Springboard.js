@@ -19,7 +19,7 @@ class Springboard extends Component {
               <Link to="/bookingform" style={{ textDecoration: 'none' }}>
                 <Item
                   title="Book Now"
-                  image={require('../Assets/springboard/yoga.png')}
+                  image={require('../../Assets/springboard/yoga.png')}
                 />
               </Link>
             </div>
@@ -32,7 +32,7 @@ class Springboard extends Component {
               >
                 <Item
                   title="Essential Oils"
-                  image={require('../Assets/springboard/oil.png')}
+                  image={require('../../Assets/springboard/oil.png')}
                 />
               </a>{' '}
             </div>
@@ -40,7 +40,7 @@ class Springboard extends Component {
               <Link to="/aboutme" style={{ textDecoration: 'none' }}>
                 <Item
                   title="About Us"
-                  image={require('../Assets/springboard/image.png')}
+                  image={require('../../Assets/springboard/image.png')}
                 />
               </Link>
             </div>
@@ -50,7 +50,7 @@ class Springboard extends Component {
               <Link to="/yoga" style={{ textDecoration: 'none' }}>
                 <Item
                   title="Private Yoga Session"
-                  image={require('../Assets/springboard/timetable.jpeg')}
+                  image={require('../../Assets/springboard/timetable.jpeg')}
                 />
               </Link>
             </div>
@@ -58,7 +58,7 @@ class Springboard extends Component {
               <Link to="/massage" style={{ textDecoration: 'none' }}>
                 <Item
                   title="Massage"
-                  image={require('../Assets/springboard/back.png')}
+                  image={require('../../Assets/springboard/back.png')}
                 />
               </Link>
             </div>
@@ -70,7 +70,7 @@ class Springboard extends Component {
               >
                 <Item
                   title="Blog"
-                  image={require('../Assets/springboard/blog.jpeg')}
+                  image={require('../../Assets/springboard/blog.jpeg')}
                 />
               </a>
             </div>

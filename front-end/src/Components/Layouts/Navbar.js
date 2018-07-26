@@ -1,6 +1,6 @@
 import React from 'react';
 import './footer.css';
-import logo from '../Assets/navbar/logo.png';
+import logo from '../../Assets/navbar/logo.png';
 import {
   Collapse,
   Navbar,
@@ -14,7 +14,7 @@ import {
   DropdownMenu,
   DropdownItem
 } from 'reactstrap';
-import { logoutAdmin } from '../actions/authActions';
+import { logoutAdmin } from '../../actions/authActions';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
